@@ -42,13 +42,13 @@ jobs:
           username: xiquwugou
           password: dckr_pat_iKFizpU079xDqOejSDOJ1V0VWRY
 
-      - name: Login to GitHub Container Registry
-        if: ${{ github.ref == 'refs/heads/master' }}
-        uses: docker/login-action@v3
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GHCR_PAT }}
+#      - name: Login to GitHub Container Registry
+#        if: ${{ github.ref == 'refs/heads/master' }}
+#        uses: docker/login-action@v3
+#        with:
+#          registry: ghcr.io
+#          username: ${{ github.repository_owner }}
+#          password: ${{ secrets.GHCR_PAT }}
 
       - name: Cache Docker layers
         uses: actions/cache@v3
