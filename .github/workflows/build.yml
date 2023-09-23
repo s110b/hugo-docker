@@ -84,8 +84,8 @@ jobs:
         uses: peter-evans/dockerhub-description@v3
         if: ${{ github.ref == 'refs/heads/master' }}
         with:
-          username: jakejarvis
-          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+          username: xiquwugou
+          password: dckr_pat_iKFizpU079xDqOejSDOJ1V0VWRY
           repository: ${{ env.HUB_IMAGE }}
           short-description: "✏️ Hugo Extended for x64 and ARM64 with PostCSS, Babel, Pandoc, and more baked in."
           readme-filepath: ./README.md
