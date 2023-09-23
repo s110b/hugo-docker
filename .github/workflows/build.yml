@@ -15,7 +15,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
 
 env:
-  HUB_IMAGE: jakejarvis/hugo-extended
+  HUB_IMAGE: xiquwugou/hugo-extended
   GHCR_IMAGE: ghcr.io/jakejarvis/hugo-extended
 
 jobs:
@@ -73,7 +73,7 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: ${{ github.ref == 'refs/heads/master' }}
-          tags: "${{ env.HUB_IMAGE }}:latest,${{ env.GHCR_IMAGE }}:latest,${{ env.HUB_IMAGE }}:${{ steps.parse_version.outputs.HUGO_VERSION }},${{ env.GHCR_IMAGE }}:${{ steps.parse_version.outputs.HUGO_VERSION }}"
+          tags: "${{ env.HUB_IMAGE }}:latest,${{ env.HUB_IMAGE }}:${{ steps.parse_version.outputs.HUGO_VERSION }}"
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
